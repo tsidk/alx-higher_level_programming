@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""
-Contains the function "wrtie_file"
-"""
+"""defining to_json_string function"""
 
 
-def write_file(filename="", text=""):
-    """returns the number of chars written to "filename" from "text" """
-    with open(filename, 'w', encoding='utf=8') as f:
-        return f.write(text)
+import json
+
+
+def to_json_string(my_obj):
+    """returns json representation of an object"""
+    return json.dumps(my_obj)
