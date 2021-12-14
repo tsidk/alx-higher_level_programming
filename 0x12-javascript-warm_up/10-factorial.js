@@ -1,10 +1,13 @@
 #!/usr/bin/node
-const a = process.argv[2];
+// Factorial numbers
+const args = process.argv.slice(2);
+const a = parseInt(args[0]);
+console.log(factorial(a));
+
 function factorial (a) {
-  if (isNaN(a) || a === 1) {
-    return (1);
-  } else {
-    return (a * factorial(a - 1));
-  }
+    if (a > 1) {
+	return (a * factorial(a - 1));
+    } else {
+	return (1);
+    }
 }
-console.log(factorial(parseInt(a)));

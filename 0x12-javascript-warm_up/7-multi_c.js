@@ -1,9 +1,12 @@
 #!/usr/bin/node
-const x = process.argv[2];
-if (isNaN(x)) {
-  console.log('Missing number of occurrences');
+// three languages
+const myVar = ['C is fun'];
+const args = process.argv.slice(2);
+if (args.length < 1) {
+    console.log('Missing number of ocurrences');
 } else {
-  for (let i = 0; i < x; i++) {
-    console.log('C is fun');
-  }
+    const x = args[0];
+    for (let i = x; i > 0; i--) {
+	console.log(myVar[0]);
+    }
 }

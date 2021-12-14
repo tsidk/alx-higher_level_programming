@@ -1,3 +1,10 @@
 #!/usr/bin/node
-const myVar = 'C is fun\nPython is cool\nJavascript is amazing';
-console.log(myVar);
+// Arguments handling
+const args = process.argv.slice(2);
+if (args.length === 0) {
+    console.log('No argument');
+} else if (args.length === 1) {
+    console.log('Argument found');
+} else {
+    console.log('Arguments found');
+}

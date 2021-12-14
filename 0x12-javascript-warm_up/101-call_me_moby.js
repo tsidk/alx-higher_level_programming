@@ -1,6 +1,7 @@
 #!/usr/bin/node
-exports.callMeMoby = function (x, theFunction) {
-  for (let i = 0; i < x; i++) {
-    theFunction();
-  }
+// Run 3 times a function
+exports.callMeMoby = function (x, thefunction) {
+    for (let i = 0; i < x; i++) {
+	thefunction();
+    }
 };

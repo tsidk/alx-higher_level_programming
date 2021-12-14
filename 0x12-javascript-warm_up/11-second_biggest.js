@@ -1,8 +1,9 @@
 #!/usr/bin/node
-let nextMax = 0;
+// Second biggest numbers
 const args = process.argv.slice(2);
-if (args.length > 1) {
-  args.sort();
-  nextMax = args[args.length - 2];
+if (args.length <= 1) {
+    console.log('0');
+} else {
+    const argssorted = args.sort(function (a, b) { return a - b; });
+    console.log(argssorted[argssorted.length - 2]);
 }
-console.log(nextMax);
